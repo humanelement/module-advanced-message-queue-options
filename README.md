@@ -34,7 +34,19 @@ php bin/magento he:queue:consumers:poison
 
 ## Recommended Patch
 
-todo
+[This is the patch file](recommended_patches/composer/message-consumer-wait-for-messages-option.patch)
+
+composer patches json config:
+```
+{
+  "patches": {
+    "magento/framework-message-queue": {
+      "Adds message queue option consumers_wait_for_messages from https://github.com/magento/magento2/commit/4e960c31bf345f59a4eccc16832a3a737d4ce8b8 ": "patches/composer/message-consumer-wait-for-messages-option.patch"
+    }
+  }
+}
+```
+
 
 ## Related Issues
 
