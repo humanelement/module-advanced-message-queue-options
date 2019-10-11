@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\MessageQueue\Model\Cron\ConsumersRunner\PidConsumerManager">
+        <plugin name="he_message_queue_pid_custom_storage_manager_plugin" type="HumanElement\AdvancedMessageQueueOptions\Plugin\PidConsumerManagerPlugin" sortOrder="1" disabled="false" />
+    </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="he_advanced_message_queue_options_put_poison_pill" xsi:type="object">HumanElement\AdvancedMessageQueueOptions\Command\PutPoisonPill</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

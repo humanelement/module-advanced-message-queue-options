@@ -1,0 +1,22 @@
+{
+    "name": "human-element/module-advanced-message-queue-options",
+    "description": "Module that allows advanced configuration of the message queue system",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Nathan Erickson",
+            "email": "nerickson@human-element.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "HumanElement\\AdvancedMessageQueueOptions\\": ""
+        }
+    }
+}
