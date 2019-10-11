@@ -12,7 +12,11 @@ It is also recommended to install a patch to get the consumers_wait_for_messages
 
 ## Installation
 
+```
 composer require human-element/module-advanced-message-queue-options
+php bin/magento module:enable HumanElement_AdvancedMessageQueueOptions
+php bin/magento setup:upgrade
+```
 
 ## Changing Consumer PIDs to a directory
 
