@@ -51,6 +51,20 @@ composer patches json config:
 }
 ```
 
+### Patch Usage
+
+This adds the consumers_wait_for_messages option to set in your env.php
+
+```
+return array (
+    'queue' => array(
+        'consumers_wait_for_messages' => false
+    )
+);
+```
+This option fixes consumers causing issues with running to long, but it also causes annother issue where unnecessary memory is being used to spawn processes that kill themselfs every minute:
+https://github.com/magento/architecture/pull/232/files
+Fixes one problem and causes another, least for now, the above proposal is a detect if there is messages and only spawn consumers when they exists option.
 
 ## Related Issues
 
